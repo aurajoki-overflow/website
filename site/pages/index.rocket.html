@@ -46,6 +46,33 @@ rotating-text {
 h1 {
  font-size: 4rem;
 }
+
+.community a {
+    width: fit-content;
+}
+
+.community-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+testimonial-small {
+    flex: 0;
+    min-width: 250px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.links card-icon {
+    width: 50px;
+    height: 50px;
+}
 </style>
 
 <block-columns style="background: #fff2dc;" full-width>
@@ -54,11 +81,7 @@ h1 {
       <span>We are</span>
       <rotating-text items='["Designers", "Developers", "Architects", "Data Engineers", "Test Specialists", "Aurajoki Overflow"]'></rotating-text>
     </h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dignissim, neque ut vanic barem
-      ultrices sollicitudin
-    </p>
-    <a class="cta" href="./sign-up"> Sign up for free </a>
+    <p>The Aurajoki Overflow Meetup is the biggest boiling pot of developers, testers, architects and designers in Turku.</p>
   </div>
 
   <img class="main-logo-image" src="./_assets/aurajoki-overflow.png" alt="alternative" />
@@ -66,45 +89,43 @@ h1 {
 
 <block-features>
   <h2 slot="title">
-    Arcu felis bibendum ut tristique entra <span class="highlight">les vitoria livanore</span>
+    We organize events and workshops for <span class="highlight">software professionals</span>
   </h2>
 
   <feature-small>
-    <card-icon slot="icon" icon="solid/headphones-alt"></card-icon>
-    <h4 slot="title">Lorem Ipsum</h4>
+    <card-icon slot="icon" icon="solid/chalkboard-teacher"></card-icon>
+    <h4 slot="title">Meetups</h4>
     <p slot="description">
-      Et blandit nisl libero at arcu. Donec ac lectus sed tellus mollis viverra. Nullam pharetra
-      ante at nunc elementum
+        Aurajoki Overflow meetups are a monthly events where we get together and discuss a common topic
     </p>
   </feature-small>
 
   <feature-small>
     <card-icon slot="icon" icon="regular/clipboard" variation="green"></card-icon>
-    <h4 slot="title">Vivera Adipis</h4>
+    <h4 slot="title">Topics</h4>
     <p slot="description">
-      Et blandit nisl libero at arcu. Donec ac lectus sed tellus mollis viverra. Nullam pharetra
-      ante at nunc elementum
+        Each meetup will have 2-3 presentation on varying topics from Data sciences to Continuous delivery
     </p>
   </feature-small>
 
   <feature-small>
     <card-icon slot="icon" icon="regular/comments" variation="blue"></card-icon>
-    <h4 slot="title">Atine Tellus</h4>
+    <h4 slot="title">Not just presentations</h4>
     <p slot="description">
-      Ety suscipit metus sollicitudin euqu isq imperdiet nibh nec magna tincidunt, nec pala
-      vehicula neque sodales verum
+        The meetups are the perfect place to find likeminded peers and maybe even hold a lightning talk
     </p>
   </feature-small>
 </block-features>
 
 <block-columns-gray>
   <div>
-    <h2>Turpis in eu mi bibendum neque egestas congue ortor consequat</h2>
+    <h2>Hosting an event</h2>
+    <p>For companies, hosting the meetup works as a perfect opportunity to get dozens of professionals to your offices and show them that you care about the local tech culture.</p>
     <p>
-      Vestibulum ullamcorper augue ex imperdiet tincidunt tellus bibendum inconsectetur rutrum
-      mauris orbi scelerisque cursus augue ac suscipit sem mattis at ut suscipit
+        The only thing you will be in charge of is providing the meetup a proper space: A space with a presentation setup/tv and room for the audience, as well as some food and drinks for the attendees to enjoy while they learn.
+        That's it. We will handle the rest: The marketing, registrations, speakers etc.
     </p>
-    <a class="cta" href="./sign-up">Do it</a>
+    <a class="cta" href="./sign-up">Ask about organizing an event</a>
   </div>
   <img src="./_assets/details-1.svg" alt="alternative" width="146" height="150" />
 </block-columns-gray>
@@ -112,88 +133,64 @@ h1 {
 <block-columns>
   <img src="./_assets/details-2.png" alt="alternative" width="544" height="587" />
   <div>
-    <h2>Turpis in eu mi bibendum neque egestas congue ortor consequat</h2>
-    <p>
-      Vestibulum ullamcorper augue ex imperdiet tincidunt tellus bibendum inconsectetur rutrum
-      mauris orbi scelerisque cursus augue ac suscipit sem mattis at ut suscipit
-    </p>
-    <a class="cta" href="./sign-up">Do it</a>
+    <h2>Upcoming events</h2>
+    <p>Stay tuned for upcoming community events hosted by Aurajoki Overflow.</p>
   </div>
 </block-columns>
 
 <block-columns-gray>
-  <h2 slot="title">Testimonials</h2>
+  <h2 slot="title">The team</h2>
 
   <testimonial-small>
     <img
       slot="image"
-      src="./_assets/testimonial-1.jpg"
+      src="./_assets/matsu.png"
       alt="alternative"
-      width="80"
-      height="80"
+      width="160"
+      height="160"
     />
-    <p>
-      Words can be like X-rays, if you use them properly—they’ll go through anything. You read and
-      you’re pierced.
-    </p>
-    <p slot="caption">Aldous Huxley — Designer</p>
+    <p>Matias Huhta</p>
+    <p></p>
+    <p slot="caption">Senior Software Developer @ Simplr</p>
+    <div class="links">
+        <a href="https://www.linkedin.com/in/matias-huhta-b0b159106/" title="LinkedIN">
+            <card-icon slot="icon" icon="solid/user-tie" variation="blue"></card-icon>
+        </a>
+
+        <a href="https://twitter.com/matsuuu_" title="twitter">
+            <card-icon slot="icon" icon="solid/dove" variation="blue"></card-icon>
+        </a>
+    </div>
   </testimonial-small>
 
-  <testimonial-small>
-    <img
-      slot="image"
-      src="./_assets/testimonial-2.jpg"
-      alt="alternative"
-      width="80"
-      height="80"
-    />
-    <p>
-      Words can be like X-rays, if you use them properly—they’ll go through anything. You read and
-      you’re pierced.
-    </p>
-    <p slot="caption">Aldous Huxley — Designer</p>
-  </testimonial-small>
-
-  <testimonial-small>
-    <img
-      slot="image"
-      src="./_assets/testimonial-3.jpg"
-      alt="alternative"
-      width="80"
-      height="80"
-    />
-    <p>
-      Words can be like X-rays, if you use them properly—they’ll go through anything. You read and
-      you’re pierced.
-    </p>
-    <p slot="caption">Aldous Huxley — Designer</p>
-  </testimonial-small>
 </block-columns-gray>
 
-<block-blue>
-  <h3>
-    Nec ultrices dui sapien eget mi proin nibh cras pulvinar mattis nunc sed blandit libero
-    volutpat diam soli
-  </h3>
-  <a class="cta-outline" href="./sign-up">Do it</a>
+<block-blue class="community">
+  <h3>Join the community</h3>
+  <div class="community-links">
+      <a href="#" title="Community Slack">
+        <card-icon slot="icon" icon="solid/hashtag" variation="blue"></card-icon>
+      </a>
+      <a href="#" title="Twitter">
+        <card-icon slot="icon" icon="solid/dove" variation="blue"></card-icon>
+      </a>
+    </div>
 </block-blue>
 
 <the-block>
   <h2 slot="title">FAQ</h2>
   <accordion-group>
     <h3 slot="invoker">
-      <accordion-button>Sensory Factors</accordion-button>
+      <accordion-button>What is Aurajoki Overflow</accordion-button>
     </h3>
     <accordion-content slot="content">
-      Nec ultrices dui sapien eget mi proin nibh cras pulvinar mattis nunc sed blandit libero
-      volutpat diam soli
+        Aurajoki Overflow is a non-profit group of tech enthusiasts hosting events in the Turku area.
     </accordion-content>
     <h3 slot="invoker">
-      <accordion-button>Sensory Factors</accordion-button>
+      <accordion-button>Can I attend an event even though I'm not yet a professional, but e.g. a student?</accordion-button>
     </h3>
     <accordion-content slot="content">
-      Nec ultrices dui sapien eget mi proin nibh cras pulvinar mattis nunc sed blandit libero
-      volutpat diam soli
+        Of course! Aurajoki Overflow is for anyone interested in tech.
     </accordion-content>
   </accordion-group>
 </the-block>
