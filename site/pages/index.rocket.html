@@ -32,11 +32,27 @@ export const title = 'Rocket Landing Page Template (Theme Spark)';
   customElements.define('rotating-text', RotatingText);
 </script>
 
-<block-columns style="background: #fff2dc;">
-  <div>
+<style>
+.rolling-title {
+    flex: 2;
+}
+.main-logo-image {
+    max-width: 300px;
+    max-height: 400px;
+}
+rotating-text {
+    white-space: nowrap;
+}
+h1 {
+ font-size: 4rem;
+}
+</style>
+
+<block-columns style="background: #fff2dc;" full-width>
+  <div class="rolling-title">
     <h1>
       <span>We are</span>
-      <rotating-text items='["Designers", "Developers", "Humans"]'></rotating-text>
+      <rotating-text items='["Designers", "Developers", "Architects", "Data Engineers", "Test Specialists", "Aurajoki Overflow"]'></rotating-text>
     </h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dignissim, neque ut vanic barem
@@ -45,7 +61,7 @@ export const title = 'Rocket Landing Page Template (Theme Spark)';
     <a class="cta" href="./sign-up"> Sign up for free </a>
   </div>
 
-  <img src="./_assets/header-illustration.svg" alt="alternative" width="189" height="150" />
+  <img class="main-logo-image" src="./_assets/aurajoki-overflow.png" alt="alternative" />
 </block-columns>
 
 <block-features>
