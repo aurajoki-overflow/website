@@ -1,110 +1,126 @@
 <script type="module" server>
-/* START - Rocket auto generated - do not touch */
-export const sourceRelativeFilePath = 'index.rocket.html';
-import { pageTree, layout, components } from './recursive.data.js';
-export { pageTree, layout, components };
-export async function registerCustomElements() {
-  // server-only components
-  // prettier-ignore
-  customElements.define('block-columns', await import('@rocket/components/block-columns.js').then(m => m.BlockColumns));
-  // prettier-ignore
-  customElements.define('card-icon', await import('@rocket/components/card-icon.js').then(m => m.CardIcon));
-  // prettier-ignore
-  customElements.define('feature-small', await import('@rocket/components/feature-small.js').then(m => m.FeatureSmall));
-  // prettier-ignore
-  customElements.define('block-features', await import('@rocket/spark/block-features.js').then(m => m.BlockFeatures));
-  // prettier-ignore
-  customElements.define('block-columns-gray', await import('#components/BlockColumnsGray.js').then(m => m.BlockColumnsGray));
-  // prettier-ignore
-  customElements.define('testimonial-small', await import('@rocket/components/testimonial-small.js').then(m => m.TestimonialSmall));
-  // prettier-ignore
-  customElements.define('block-blue', await import('@rocket/spark/block-blue.js').then(m => m.BlockBlue));
-  // prettier-ignore
-  customElements.define('the-block', await import('@rocket/components/the-block.js').then(m => m.TheBlock));
-}
-/* END - Rocket auto generated - do not touch */
+  /* START - Rocket auto generated - do not touch */
+  export const sourceRelativeFilePath = "index.rocket.html";
+  import { pageTree, layout, components } from "./recursive.data.js";
+  export { pageTree, layout, components };
+  export async function registerCustomElements() {
+    // server-only components
+    // prettier-ignore
+    customElements.define('block-columns', await import('@rocket/components/block-columns.js').then(m => m.BlockColumns));
+    // prettier-ignore
+    customElements.define('card-icon', await import('@rocket/components/card-icon.js').then(m => m.CardIcon));
+    // prettier-ignore
+    customElements.define('feature-small', await import('@rocket/components/feature-small.js').then(m => m.FeatureSmall));
+    // prettier-ignore
+    customElements.define('block-features', await import('@rocket/spark/block-features.js').then(m => m.BlockFeatures));
+    // prettier-ignore
+    customElements.define('block-columns-gray', await import('#components/BlockColumnsGray.js').then(m => m.BlockColumnsGray));
+    // prettier-ignore
+    customElements.define('testimonial-small', await import('@rocket/components/testimonial-small.js').then(m => m.TestimonialSmall));
+    // prettier-ignore
+    customElements.define('block-blue', await import('@rocket/spark/block-blue.js').then(m => m.BlockBlue));
+    // prettier-ignore
+    customElements.define('the-block', await import('@rocket/components/the-block.js').then(m => m.TheBlock));
+  }
+  /* END - Rocket auto generated - do not touch */
 
-export const title = 'Rocket Landing Page Template (Theme Spark)';
+  export const title = "Rocket Landing Page Template (Theme Spark)";
 </script>
 
 <script type="module">
-  import { RotatingText } from '@rocket/components/rotating-text.js';
-  customElements.define('rotating-text', RotatingText);
+  import { RotatingText } from "@rocket/components/rotating-text.js";
+  customElements.define("rotating-text", RotatingText);
 </script>
 
 <style>
-.rolling-title {
+  .rolling-title {
     flex: 2;
-}
-.main-logo-image {
+  }
+  .main-logo-image {
     max-width: 300px;
     max-height: 400px;
-}
-rotating-text {
+  }
+  rotating-text {
     white-space: nowrap;
-}
-h1 {
- font-size: 4rem;
-}
+  }
+  h1 {
+    font-size: 4rem;
+  }
 
-.community a {
+  .community a {
     width: fit-content;
-}
+  }
 
-.community-links {
+  .community-links {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-}
-testimonial-small {
+  }
+  testimonial-small {
     flex: 0;
     min-width: 250px;
-}
+  }
 
-.links {
+  .links {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-}
+  }
 
-.links card-icon {
+  .links card-icon {
     width: 50px;
     height: 50px;
-}
+  }
 </style>
 
-<block-columns style="background: #fff2dc;" full-width>
+<block-columns style="background: #fff2dc" full-width>
   <div class="rolling-title">
     <h1>
       <span>We are</span>
-      <rotating-text items='["Designers", "Developers", "Architects", "Data Engineers", "Test Specialists", "Aurajoki Overflow"]'></rotating-text>
+      <rotating-text
+        items='["Designers", "Developers", "Architects", "Data Engineers", "Test Specialists", "Aurajoki Overflow"]'
+      ></rotating-text>
     </h1>
-    <p>The Aurajoki Overflow Meetup is the biggest boiling pot of developers, testers, architects and designers in Turku.</p>
+    <p>
+      Aurajoki Overflow is a tech meetup focused on all of the nooks and
+      crannies of working in software.
+    </p>
   </div>
 
-  <img class="main-logo-image" src="./_assets/aurajoki-overflow.png" alt="alternative" />
+  <img
+    class="main-logo-image"
+    src="./_assets/aurajoki-overflow.png"
+    alt="alternative"
+  />
 </block-columns>
 
 <block-features>
   <h2 slot="title">
-    We organize events and workshops for <span class="highlight">software professionals</span>
+    We organize events and workshops for
+    <span class="highlight">software professionals</span>
   </h2>
 
   <feature-small>
     <card-icon slot="icon" icon="solid/chalkboard-teacher"></card-icon>
     <h4 slot="title">Meetups</h4>
     <p slot="description">
-        Aurajoki Overflow meetups are a monthly events where we get together and discuss a common topic
+      Aurajoki Overflow meetups are a monthly events where we get together and
+      discuss a common topic
     </p>
   </feature-small>
 
   <feature-small>
-    <card-icon slot="icon" icon="regular/clipboard" variation="green"></card-icon>
+    <card-icon
+      slot="icon"
+      icon="regular/clipboard"
+      variation="green"
+    ></card-icon>
     <h4 slot="title">Topics</h4>
     <p slot="description">
-        Each meetup will have 2-3 presentation on varying topics from Data sciences to Continuous delivery
+      Each meetup will have 2-3 presentation on varying topics from Data
+      sciences to Continuous delivery to code editors
     </p>
   </feature-small>
 
@@ -112,7 +128,8 @@ testimonial-small {
     <card-icon slot="icon" icon="regular/comments" variation="blue"></card-icon>
     <h4 slot="title">Not just presentations</h4>
     <p slot="description">
-        The meetups are the perfect place to find likeminded peers and maybe even hold a lightning talk
+      The meetups are the perfect place to find likeminded peers and maybe even
+      hold a lightning talk
     </p>
   </feature-small>
 </block-features>
@@ -120,18 +137,35 @@ testimonial-small {
 <block-columns-gray>
   <div>
     <h2>Hosting an event</h2>
-    <p>For companies, hosting the meetup works as a perfect opportunity to get dozens of professionals to your offices and show them that you care about the local tech culture.</p>
     <p>
-        The only thing you will be in charge of is providing the meetup a proper space: A space with a presentation setup/tv and room for the audience, as well as some food and drinks for the attendees to enjoy while they learn.
-        That's it. We will handle the rest: The marketing, registrations, speakers etc.
+      For companies, hosting the meetup works as a perfect opportunity to get
+      dozens of professionals to your offices and show them that you care about
+      the local tech culture.
+    </p>
+    <p>
+      The only thing you will be in charge of is providing the meetup a proper
+      space: A space with a presentation setup/tv and room for the audience, as
+      well as some food and drinks for the attendees to enjoy while they learn.
+      That's it. We will handle the rest: The marketing, registrations, speakers
+      etc.
     </p>
     <a class="cta" href="./sign-up">Ask about organizing an event</a>
   </div>
-  <img src="./_assets/details-1.svg" alt="alternative" width="146" height="150" />
+  <img
+    src="./_assets/details-1.svg"
+    alt="alternative"
+    width="146"
+    height="150"
+  />
 </block-columns-gray>
 
 <block-columns>
-  <img src="./_assets/details-2.png" alt="alternative" width="544" height="587" />
+  <img
+    src="./_assets/details-2.png"
+    alt="alternative"
+    width="544"
+    height="587"
+  />
   <div>
     <h2>Upcoming events</h2>
     <p>Stay tuned for upcoming community events hosted by Aurajoki Overflow.</p>
@@ -153,28 +187,34 @@ testimonial-small {
     <p></p>
     <p slot="caption">Senior Software Developer @ Simplr</p>
     <div class="links">
-        <a href="https://www.linkedin.com/in/matias-huhta-b0b159106/" title="LinkedIN">
-            <card-icon slot="icon" icon="solid/user-tie" variation="blue"></card-icon>
-        </a>
+      <a
+        href="https://www.linkedin.com/in/matias-huhta-b0b159106/"
+        title="LinkedIN"
+      >
+        <card-icon
+          slot="icon"
+          icon="solid/user-tie"
+          variation="blue"
+        ></card-icon>
+      </a>
 
-        <a href="https://twitter.com/matsuuu_" title="twitter">
-            <card-icon slot="icon" icon="solid/dove" variation="blue"></card-icon>
-        </a>
+      <a href="https://twitter.com/matsuuu_" title="twitter">
+        <card-icon slot="icon" icon="solid/dove" variation="blue"></card-icon>
+      </a>
     </div>
   </testimonial-small>
-
 </block-columns-gray>
 
 <block-blue class="community">
   <h3>Join the community</h3>
   <div class="community-links">
-      <a href="#" title="Community Slack">
-        <card-icon slot="icon" icon="solid/hashtag" variation="blue"></card-icon>
-      </a>
-      <a href="#" title="Twitter">
-        <card-icon slot="icon" icon="solid/dove" variation="blue"></card-icon>
-      </a>
-    </div>
+    <a href="https://discord.gg/GkM65dtZ2h" title="Community Discord">
+      <card-icon slot="icon" icon="solid/hashtag" variation="blue"></card-icon>
+    </a>
+    <a href="https://twitter.com/AurajokiO" title="Twitter">
+      <card-icon slot="icon" icon="solid/dove" variation="blue"></card-icon>
+    </a>
+  </div>
 </block-blue>
 
 <the-block>
@@ -184,13 +224,32 @@ testimonial-small {
       <accordion-button>What is Aurajoki Overflow</accordion-button>
     </h3>
     <accordion-content slot="content">
-        Aurajoki Overflow is a non-profit group of tech enthusiasts hosting events in the Turku area.
+      Aurajoki Overflow is a non-profit group of tech enthusiasts hosting events
+      in the Turku area.
     </accordion-content>
     <h3 slot="invoker">
-      <accordion-button>Can I attend an event even though I'm not yet a professional, but e.g. a student?</accordion-button>
+      <accordion-button>How can I get in contact with you?</accordion-button>
     </h3>
     <accordion-content slot="content">
-        Of course! Aurajoki Overflow is for anyone interested in tech.
+      You can contact us via email at aurajoki.overflow@gmail.com
+    </accordion-content>
+    <h3 slot="invoker">
+      <accordion-button
+        >When is the next event going to be held?</accordion-button
+      >
+    </h3>
+    <accordion-content slot="content">
+      Keep an close eye on our socials and groups. We will inform about upcoming
+      events there! The first meetup is planned to be held in Autumn 2022.
+    </accordion-content>
+    <h3 slot="invoker">
+      <accordion-button
+        >Can I attend an event even though I'm not yet a professional, but e.g.
+        a student?</accordion-button
+      >
+    </h3>
+    <accordion-content slot="content">
+      Of course! Aurajoki Overflow is for anyone interested in tech.
     </accordion-content>
   </accordion-group>
 </the-block>
