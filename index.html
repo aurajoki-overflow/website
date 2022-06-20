@@ -56,7 +56,7 @@
     <!--/lit-part--><!--/lit-part--> <!--lit-part ikwVXewzQI4=-->
       <header id="main-header"><!--lit-part--><!--/lit-part--></header>
     <!--/lit-part-->
-        <!--lit-part UNbWrd8S5FY=--><main><!--lit-part--><!--lit-part tdZw5KftXMo=-->
+        <!--lit-part UNbWrd8S5FY=--><main><!--lit-part--><!--lit-part wsRByznlhGk=-->
 
 
 <style>
@@ -313,10 +313,11 @@
   </style><!--lit-part ueNIHu4iFNI=--> <div class="icon"><!--lit-part kBHlEdRNaZc=--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm144 418c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V118c0-3.3 2.7-6 6-6h42v36c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-36h42c3.3 0 6 2.7 6 6z"></path></svg><!--/lit-part--></div> <!--/lit-part--></template></card-icon>
     <h4 slot="title">Topics</h4>
     <p slot="description">
-      Each meetup will host 1 main subject with 2-3 presentation on varying variations on the topic.
+      Each meetup will host 1 main subject with 2-3 presentation on varying
+      variations on the topic.
     </p>
     <p slot="description">
-        e.g. A Code Editor themed meetup might host talks on vim &amp; emacs
+      e.g. A Code Editor themed meetup might host talks on vim &amp; emacs
     </p>
   </feature-small>
 
@@ -488,6 +489,69 @@
     <p>Stay tuned for upcoming community events hosted by Aurajoki Overflow.</p>
   </div>
 </block-columns>
+
+<block-columns-gray><template shadowroot="open"><style>
+      :host {
+        display: block;
+        padding: var(--space-2xl-3xl, 8em) 0;
+      }
+      #wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 var(--space-2xs, 0.8em);
+      }
+      :host([full-width]) {
+        max-width: 100%;
+      }
+      slot {
+        display: block;
+      }
+      slot[name='title'] {
+        text-align: center;
+        max-width: 33em;
+        margin: 0 auto;
+      }
+    
+      #content {
+        display: flex;
+        gap: var(--space-m, 2rem);
+        flex-direction: column;
+      }
+      ::slotted(*) {
+        flex: 1;
+        height: auto;
+      }
+
+      @media (min-width: 600px) {
+        #content {
+          flex-direction: row;
+        }
+      }
+    
+      :host {
+        background-color: #f9f8f8;
+      }
+    </style><!--lit-part yD9kzY24qSA=-->
+      <div id="wrapper">
+        <slot name="title"></slot>
+        <slot id="content"></slot>
+      </div>
+    <!--/lit-part--></template>
+  <div>
+    <h2>Become a speaker</h2>
+    <p>
+      Got a subject you're really passionate about? Have some new technology or
+      method you want to show to all of the World (or at least Turku)?
+    </p>
+    <p>
+      Submit your proposal for a talk, and we'll figure out a meetup to fit your
+      subject into! It's okay if the your talk isn't 100% complete yet, we can
+      help you with ideas.
+    </p>
+    <a class="cta" href="mailto:aurajoki.overflow@gmail.com">Submit a talk</a>
+  </div>
+  <img src="b2a904d1.svg" alt="alternative" width="146" height="150">
+</block-columns-gray>
 
 <block-columns-gray><template shadowroot="open"><style>
       :host {
@@ -792,10 +856,12 @@
       <accordion-button>So what exactly is the event structure?</accordion-button>
     </h3>
     <accordion-content slot="content">
-        Each of the monthly meetups will revolve around a single topic. One month we might discuss Continuous Delivery, the next
-        we might be talking about Static Site Generators. 
-        <br><br>
-        Each meetup will then host 2-3 presentations (and possible lightning talks) revolving around that meetups topic.
+      Each of the monthly meetups will revolve around a single topic. One month
+      we might discuss Continuous Delivery, the next we might be talking about
+      Static Site Generators.
+      <br><br>
+      Each meetup will then host 2-3 presentations (and possible lightning
+      talks) revolving around that meetups topic.
     </accordion-content>
     <h3 slot="invoker">
       <accordion-button>How can I get in contact with you?</accordion-button>
