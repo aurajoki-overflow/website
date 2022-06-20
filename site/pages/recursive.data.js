@@ -9,8 +9,8 @@ await pageTree.restore(new URL('./pageTreeData.rocketGenerated.json', import.met
 export const layout = new LayoutHome({
   pageTree,
   titleWrapperFn: title => title,
-  description: 'Welcome to the Rocket Spark Landing Page example',
-  siteName: 'Rocket',
+  description: 'Aurajoki Overflow',
+  siteName: 'Aurajoki Overflow',
 });
 
 export const components = {

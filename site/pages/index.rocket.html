@@ -1,28 +1,28 @@
 <script type="module" server>
-  /* START - Rocket auto generated - do not touch */
-  export const sourceRelativeFilePath = "index.rocket.html";
-  import { pageTree, layout, components } from "./recursive.data.js";
-  export { pageTree, layout, components };
-  export async function registerCustomElements() {
-    // server-only components
-    // prettier-ignore
-    customElements.define('block-columns', await import('@rocket/components/block-columns.js').then(m => m.BlockColumns));
-    // prettier-ignore
-    customElements.define('card-icon', await import('@rocket/components/card-icon.js').then(m => m.CardIcon));
-    // prettier-ignore
-    customElements.define('feature-small', await import('@rocket/components/feature-small.js').then(m => m.FeatureSmall));
-    // prettier-ignore
-    customElements.define('block-features', await import('@rocket/spark/block-features.js').then(m => m.BlockFeatures));
-    // prettier-ignore
-    customElements.define('block-columns-gray', await import('#components/BlockColumnsGray.js').then(m => m.BlockColumnsGray));
-    // prettier-ignore
-    customElements.define('testimonial-small', await import('@rocket/components/testimonial-small.js').then(m => m.TestimonialSmall));
-    // prettier-ignore
-    customElements.define('block-blue', await import('@rocket/spark/block-blue.js').then(m => m.BlockBlue));
-    // prettier-ignore
-    customElements.define('the-block', await import('@rocket/components/the-block.js').then(m => m.TheBlock));
-  }
-  /* END - Rocket auto generated - do not touch */
+/* START - Rocket auto generated - do not touch */
+export const sourceRelativeFilePath = 'index.rocket.html';
+import { pageTree, layout, components } from './recursive.data.js';
+export { pageTree, layout, components };
+export async function registerCustomElements() {
+  // server-only components
+  // prettier-ignore
+  customElements.define('block-columns', await import('@rocket/components/block-columns.js').then(m => m.BlockColumns));
+  // prettier-ignore
+  customElements.define('card-icon', await import('@rocket/components/card-icon.js').then(m => m.CardIcon));
+  // prettier-ignore
+  customElements.define('feature-small', await import('@rocket/components/feature-small.js').then(m => m.FeatureSmall));
+  // prettier-ignore
+  customElements.define('block-features', await import('@rocket/spark/block-features.js').then(m => m.BlockFeatures));
+  // prettier-ignore
+  customElements.define('block-columns-gray', await import('#components/BlockColumnsGray.js').then(m => m.BlockColumnsGray));
+  // prettier-ignore
+  customElements.define('testimonial-small', await import('@rocket/components/testimonial-small.js').then(m => m.TestimonialSmall));
+  // prettier-ignore
+  customElements.define('block-blue', await import('@rocket/spark/block-blue.js').then(m => m.BlockBlue));
+  // prettier-ignore
+  customElements.define('the-block', await import('@rocket/components/the-block.js').then(m => m.TheBlock));
+}
+/* END - Rocket auto generated - do not touch */
 
   export const title = "Rocket Landing Page Template (Theme Spark)";
 </script>
@@ -107,7 +107,7 @@
     <h4 slot="title">Meetups</h4>
     <p slot="description">
       Aurajoki Overflow meetups are a monthly events where we get together and
-      discuss a common topic
+      discuss a common topic.
     </p>
   </feature-small>
 
@@ -119,8 +119,10 @@
     ></card-icon>
     <h4 slot="title">Topics</h4>
     <p slot="description">
-      Each meetup will have 2-3 presentation on varying topics from Data
-      sciences to Continuous delivery to code editors
+      Each meetup will host 1 main subject with 2-3 presentation on varying variations on the topic.
+    </p>
+    <p slot="description">
+        e.g. A Code Editor themed meetup might host talks on vim & emacs
     </p>
   </feature-small>
 
@@ -149,7 +151,7 @@
       That's it. We will handle the rest: The marketing, registrations, speakers
       etc.
     </p>
-    <a class="cta" href="./sign-up">Ask about organizing an event</a>
+    <a class="cta" href="mailto:aurajoki.overflow@gmail.com">Ask about organizing an event</a>
   </div>
   <img
     src="./_assets/details-1.svg"
@@ -243,6 +245,15 @@
     <accordion-content slot="content">
       Aurajoki Overflow is a non-profit group of tech enthusiasts hosting events
       in the Turku area.
+    </accordion-content>
+    <h3 slot="invoker">
+      <accordion-button>So what exactly is the event structure?</accordion-button>
+    </h3>
+    <accordion-content slot="content">
+        Each of the monthly meetups will revolve around a single topic. One month we might discuss Continuous Delivery, the next
+        we might be talking about Static Site Generators. 
+        <br><br>
+        Each meetup will then host 2-3 presentations (and possible lightning talks) revolving around that meetups topic.
     </accordion-content>
     <h3 slot="invoker">
       <accordion-button>How can I get in contact with you?</accordion-button>
